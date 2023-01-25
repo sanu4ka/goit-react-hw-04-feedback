@@ -2,7 +2,7 @@ import { nanoid } from 'nanoid';
 import PropTypes from 'prop-types';
 import css from './FeedbackOptions.module.css';
 
-const FeedbackOptions = ({ options, onLeaveFeedback }) => {
+export default function FeedbackOptions({ options, onLeaveFeedback }) {
   return (
     <ul className={css.list}>
       {options.map(option => (
@@ -18,11 +18,9 @@ const FeedbackOptions = ({ options, onLeaveFeedback }) => {
       ))}
     </ul>
   );
-};
+}
 
 FeedbackOptions.propTypes = {
   options: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
   onLeaveFeedback: PropTypes.func.isRequired,
 };
-
-export default FeedbackOptions;
