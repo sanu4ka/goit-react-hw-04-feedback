@@ -15,9 +15,11 @@ export default function App() {
   const onLeaveFeedback = option => {
     if (option === 'good') {
       setGood(good + 1);
+      return;
     }
     if (option === 'bad') {
       setBad(bad + 1);
+      return;
     }
     setNeutral(neutral + 1);
     return;
